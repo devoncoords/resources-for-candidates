@@ -1,36 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  /* Sourcegraph Brand Colors */
+  /* Sourcegraph Vermilion Brand Colors */
+  --vermilion-00: #060000;  /* backgrounds (dark) */
+  --vermilion-01: #200302;  /* backgrounds */
+  --vermilion-02: #410604;  /* badges */
+  --vermilion-07: #F34E3F;  /* hero/primary color */
+  --vermilion-08: #FF7867;  /* accents */
+  --vermilion-11: #FFF3F0;  /* headings/light text */
+  
+  /* Light mode */
   --background: #ffffff;
-  --background-dark: #0f111a;
-  --background-secondary: #f7f8fa;
-  --background-secondary-dark: #1e1e20;
+  --background-secondary: var(--vermilion-11);
+  --background-dark: var(--vermilion-00);
+  --background-secondary-dark: var(--vermilion-01);
   
-  --foreground: #1e1e20;
-  --foreground-dark: #ffffff;
-  --foreground-muted: #6b7280;
-  --foreground-muted-dark: #9ca3af;
+  --foreground: var(--vermilion-00);
+  --foreground-dark: var(--vermilion-11);
+  --foreground-muted: var(--vermilion-02);
+  --foreground-muted-dark: var(--vermilion-08);
   
-  --primary: #3b30ff;
-  --primary-hover: #2a21e6;
-  --accent: #ff5c5c;
-  --accent-hover: #e64545;
+  --primary: var(--vermilion-07);
+  --primary-hover: #e63f30;
+  --accent: var(--vermilion-08);
+  --accent-hover: #f56b5a;
   
-  --border: #e5e7eb;
-  --border-dark: #374151;
+  --border: #f0f0f0;
+  --border-dark: var(--vermilion-02);
   
   --card: #ffffff;
-  --card-dark: #1f2937;
+  --card-dark: var(--vermilion-01);
+  
+  /* Badge colors */
+  --badge-bg: var(--vermilion-02);
+  --badge-text: var(--vermilion-11);
   
   /* Spacing */
   --spacing-unit: 8px;
   --border-radius: 8px;
   --border-radius-lg: 12px;
   
-  /* Typography */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Typography - Using JetBrains Mono as PolySans alternative */
+  --font-family-primary: 'JetBrains Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+  --font-family-editorial: 'JetBrains Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
 }
 
 @theme inline {
@@ -39,8 +52,8 @@
   --color-primary: var(--primary);
   --color-accent: var(--accent);
   --color-muted: var(--foreground-muted);
-  --font-sans: var(--font-family);
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-sans: var(--font-family-primary);
+  --font-mono: var(--font-family-primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,7 +74,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-family);
+  font-family: var(--font-family-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -73,11 +86,11 @@ body {
   }
   
   .bg-gradient-hero {
-    background: linear-gradient(135deg, var(--background-dark) 0%, #1a1d29 100%);
+    background: linear-gradient(135deg, var(--vermilion-00) 0%, var(--vermilion-01) 100%);
   }
   
   .bg-gradient-accent {
-    background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%);
+    background: linear-gradient(135deg, var(--vermilion-07) 0%, var(--vermilion-08) 100%);
   }
 
   .line-clamp-2 {

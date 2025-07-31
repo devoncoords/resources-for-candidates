@@ -13,7 +13,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
               Interviewing at Sourcegraph? We&apos;ve got you covered.
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-300 text-balance">
+            <p className="text-xl md:text-2xl mb-8 text-[--vermilion-08] text-balance">
               Everything you need to succeed in your interview journey with comprehensive preparation resources, cultural insights, and hands-on experience with our tools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -24,7 +24,7 @@ export default function Home() {
                 </Button>
               </Link>
               <a href="https://ampcode.com" target="_blank" rel="noopener noreferrer">
-                <Button size="xl" variant="secondary" className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border-white/20 text-white">
+                <Button size="xl" variant="secondary" className="w-full sm:w-auto bg-[--vermilion-08]/20 hover:bg-[--vermilion-08]/30 border-[--vermilion-08]/40 text-[--vermilion-11]">
                   Download Amp
                   <ExternalLink className="ml-2 h-5 w-5" />
                 </Button>
@@ -50,8 +50,8 @@ export default function Home() {
             <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-8">
                 <div className="mb-6">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
-                    <BookOpen className="h-6 w-6 text-white" />
+                  <div className="w-12 h-12 bg-[--vermilion-07] rounded-lg flex items-center justify-center mb-4">
+                    <BookOpen className="h-6 w-6 text-[--vermilion-11]" />
                   </div>
                   <CardTitle className="mb-3">Interview Preparation</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
@@ -59,7 +59,7 @@ export default function Home() {
                   </CardDescription>
                 </div>
                 <Link href="/interview-prep">
-                  <Button variant="ghost" className="group-hover:text-[--primary] transition-colors">
+                  <Button variant="ghost" className="group-hover:text-[--vermilion-07] transition-colors">
                     Learn more
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -70,8 +70,8 @@ export default function Home() {
             <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-8">
                 <div className="mb-6">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-white" />
+                  <div className="w-12 h-12 bg-[--vermilion-07] rounded-lg flex items-center justify-center mb-4">
+                    <Users className="h-6 w-6 text-[--vermilion-11]" />
                   </div>
                   <CardTitle className="mb-3">Company Culture</CardTitle>
                   <CardDescription className="text-base leading-relaxed">

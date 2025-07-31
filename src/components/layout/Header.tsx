@@ -23,8 +23,8 @@ export function Header() {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Sourcegraph</span>
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-[--primary] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">S</span>
+              <div className="w-8 h-8 bg-[--vermilion-07] rounded-lg flex items-center justify-center">
+                <span className="text-[--vermilion-11] font-bold text-sm">S</span>
               </div>
               <span className="text-xl font-bold text-[--foreground]">Sourcegraph</span>
             </div>
@@ -44,13 +44,13 @@ export function Header() {
         
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium text-[--foreground] hover:text-[--primary] transition-colors"
-            >
-              {item.name}
-            </Link>
+          <Link
+          key={item.name}
+          href={item.href}
+          className="text-sm font-medium text-[--foreground] hover:text-[--vermilion-07] transition-colors"
+          >
+          {item.name}
+          </Link>
           ))}
         </div>
         
@@ -86,8 +86,8 @@ export function Header() {
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Sourcegraph</span>
                 <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-[--primary] rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">S</span>
+                  <div className="w-8 h-8 bg-[--vermilion-07] rounded-lg flex items-center justify-center">
+                    <span className="text-[--vermilion-11] font-bold text-sm">S</span>
                   </div>
                   <span className="text-xl font-bold text-[--foreground]">Sourcegraph</span>
                 </div>

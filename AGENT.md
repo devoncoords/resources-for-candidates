@@ -41,14 +41,17 @@ src/
 
 ## Design System
 
-### Color Scheme (CSS Variables)
-- `--primary: #3b30ff` (Sourcegraph blue)
-- `--accent: #ff5c5c` (Call-to-action orange)
-- `--background: #ffffff / #0f111a` (light/dark)
-- `--foreground: #1e1e20 / #ffffff` (text)
+### Color Scheme (Vermilion Brand Colors)
+- `--vermilion-07: #F34E3F` (Hero/Primary color - used for logos, CTAs)
+- `--vermilion-00: #060000` (Dark backgrounds)
+- `--vermilion-01: #200302` (Secondary dark backgrounds)
+- `--vermilion-02: #410604` (Badges, muted dark content)
+- `--vermilion-08: #FF7867` (Accents, hover states)
+- `--vermilion-11: #FFF3F0` (Light text, headings on dark)
 
 ### Typography
-- Font: Inter (Google Fonts)
+- Font: JetBrains Mono (as PolySans alternative)
+- Monospace aesthetic for technical/futuristic feel
 - Hierarchy: h1 (4xl-6xl), h2 (3xl-4xl), h3 (2xl), body (base)
 
 ### Components
@@ -142,14 +145,16 @@ src/
 ## Brand Guidelines
 
 ### Visual Identity
-- Follows Sourcegraph.com design patterns
-- Dark hero sections with light content areas
-- Generous whitespace and clean typography
-- Consistent button and card styling
-- Professional developer-focused aesthetic
+- Follows Sourcegraph Vermilion brand system
+- Monochromatic color palette with sophisticated, futuristic feel
+- Dark hero sections using Vermilion-00/01 with Vermilion-11 text
+- Primary CTAs and accents use Vermilion-07 (hero color)
+- Monospace typography (JetBrains Mono) for technical aesthetic
+- Generous whitespace and clean, modern styling
 
 ### Tone & Voice
 - Technical but accessible
 - Encouraging and supportive for candidates
 - Transparent about company culture
 - Product-focused with clear value propositions
+- Sophisticated and futuristic brand presentation

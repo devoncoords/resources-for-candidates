@@ -42,7 +42,7 @@ const footerNavigation = {
 
 export function Footer() {
   return (
-    <footer className="bg-[--background-dark] text-[--foreground-dark]" aria-labelledby="footer-heading">
+    <footer className="bg-[--vermilion-00] text-[--vermilion-11]" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -50,12 +50,12 @@ export function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-[--primary] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">S</span>
+              <div className="w-8 h-8 bg-[--vermilion-07] rounded-lg flex items-center justify-center">
+                <span className="text-[--vermilion-11] font-bold text-sm">S</span>
               </div>
               <span className="text-xl font-bold">Sourcegraph</span>
             </Link>
-            <p className="text-sm leading-6 text-[--foreground-muted-dark] max-w-md">
+            <p className="text-sm leading-6 text-[--vermilion-08] max-w-md">
               Join us in building the future of software development. We&apos;re creating tools that help developers code, explore, and understand their software better.
             </p>
             <div className="flex space-x-6">
@@ -63,7 +63,7 @@ export function Footer() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-[--foreground-muted-dark] hover:text-[--foreground-dark] transition-colors"
+                  className="text-[--vermilion-08] hover:text-[--vermilion-11] transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -82,7 +82,7 @@ export function Footer() {
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-sm leading-6 text-[--foreground-muted-dark] hover:text-[--foreground-dark] transition-colors"
+                        className="text-sm leading-6 text-[--vermilion-08] hover:text-[--vermilion-11] transition-colors"
                       >
                         {item.name}
                       </Link>
