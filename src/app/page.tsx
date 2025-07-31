@@ -1,103 +1,212 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardTitle, CardDescription } from '@/components/ui/Card';
+import { BookOpen, Users, Zap, ArrowRight, Quote, ExternalLink } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-hero text-white section">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
+              Interviewing at Sourcegraph? We&apos;ve got you covered.
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-300 text-balance">
+              Everything you need to succeed in your interview journey with comprehensive preparation resources, cultural insights, and hands-on experience with our tools.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/interview-prep">
+                <Button size="xl" variant="primary" className="w-full sm:w-auto">
+                  Start your prep
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <a href="https://ampcode.com" target="_blank" rel="noopener noreferrer">
+                <Button size="xl" variant="secondary" className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border-white/20 text-white">
+                  Download Amp
+                  <ExternalLink className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Value Propositions Section */}
+      <section className="section bg-[--background-secondary]">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Everything you need to succeed
+            </h2>
+            <p className="text-lg text-[--foreground-muted] max-w-2xl mx-auto">
+              Comprehensive resources designed to help you understand Sourcegraph, prepare for interviews, and experience our culture firsthand.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
+                    <BookOpen className="h-6 w-6 text-white" />
+                  </div>
+                  <CardTitle className="mb-3">Interview Preparation</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">
+                    Detailed preparation guides, example questions, coding challenges, and insider tips to help you perform your best in technical and behavioral interviews.
+                  </CardDescription>
+                </div>
+                <Link href="/interview-prep">
+                  <Button variant="ghost" className="group-hover:text-[--primary] transition-colors">
+                    Learn more
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
+                    <Users className="h-6 w-6 text-white" />
+                  </div>
+                  <CardTitle className="mb-3">Company Culture</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">
+                    Discover our values, mission, and what it&apos;s really like to work at Sourcegraph. Learn about our remote-first culture and collaborative environment.
+                  </CardDescription>
+                </div>
+                <Link href="/culture">
+                  <Button variant="ghost" className="group-hover:text-[--primary] transition-colors">
+                    Explore culture
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
+                    <Zap className="h-6 w-6 text-white" />
+                  </div>
+                  <CardTitle className="mb-3">Product Experience</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">
+                    Try Amp and explore our developer tools firsthand. Get familiar with the products you&apos;ll be working on and see what makes them special.
+                  </CardDescription>
+                </div>
+                <Link href="/products">
+                  <Button variant="ghost" className="group-hover:text-[--primary] transition-colors">
+                    Try our tools
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Employee Testimonials Carousel */}
+      <section className="section">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              What our team says
+            </h2>
+            <p className="text-lg text-[--foreground-muted] max-w-2xl mx-auto">
+              Hear from Sourcegraph employees about their interview experience and what it&apos;s like working here.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="relative">
+              <CardContent className="p-8">
+                <Quote className="h-8 w-8 text-[--primary] mb-4 opacity-50" />
+                <p className="text-lg mb-6 leading-relaxed">
+                  &ldquo;The interview process was transparent and collaborative. I felt like I was already part of the team by the end of it. The focus on values alignment really showed me this was the right place for me.&rdquo;
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gradient-accent rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                    A
+                  </div>
+                  <div>
+                    <p className="font-semibold">Alex Chen</p>
+                    <p className="text-sm text-[--foreground-muted]">Senior Software Engineer</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="relative">
+              <CardContent className="p-8">
+                <Quote className="h-8 w-8 text-[--primary] mb-4 opacity-50" />
+                <p className="text-lg mb-6 leading-relaxed">
+                  &ldquo;I appreciated how the technical interviews were realistic and relevant to the actual work. The team made me feel comfortable to ask questions and think out loud throughout the process.&rdquo;
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gradient-accent rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                    S
+                  </div>
+                  <div>
+                    <p className="font-semibold">Sarah Kim</p>
+                    <p className="text-sm text-[--foreground-muted]">Product Designer</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="relative md:col-span-2 lg:col-span-1">
+              <CardContent className="p-8">
+                <Quote className="h-8 w-8 text-[--primary] mb-4 opacity-50" />
+                <p className="text-lg mb-6 leading-relaxed">
+                  &ldquo;The culture fit conversations felt genuine and two-way. I got to learn as much about Sourcegraph as they learned about me. It set the foundation for a great working relationship.&rdquo;
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gradient-accent rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                    M
+                  </div>
+                  <div>
+                    <p className="font-semibold">Marcus Johnson</p>
+                    <p className="text-sm text-[--foreground-muted]">Engineering Manager</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="section bg-[--background-secondary]">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to join our team?
+            </h2>
+            <p className="text-lg text-[--foreground-muted] mb-8 leading-relaxed">
+              Have questions about the interview process or want to learn more about specific roles? 
+              We&apos;re here to help you succeed. Reach out to our recruiting team or connect with current employees.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/interview-prep">
+                <Button size="lg" variant="primary" className="w-full sm:w-auto">
+                  Start preparing
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <a href="mailto:recruiting@sourcegraph.com">
+                <Button size="lg" variant="secondary" className="w-full sm:w-auto">
+                  Contact recruiting
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
